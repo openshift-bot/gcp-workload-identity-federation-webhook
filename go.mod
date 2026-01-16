@@ -1,6 +1,6 @@
 module github.com/pfnet-research/gcp-workload-identity-federation-webhook
 
-go 1.25.5
+go 1.25.0
 
 require (
 	github.com/MakeNowJust/heredoc v1.0.0
