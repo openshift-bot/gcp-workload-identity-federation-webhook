@@ -2,5 +2,5 @@ FROM registry.ci.openshift.org/ocp/builder:rhel-9-golang-1.24-openshift-4.22 AS 
 WORKDIR /workspace
 COPY . .
 RUN go build -mod=vendor -o gcp-workload-identity-federation-webhook main.go
-FROM registry.ci.openshift.org/ocp/4.22:base-rhel9
+FROM registry.ci.openshift.org/ocp/4.22:base-rhel9-minimal
 COPY --from=builder /workspace/gcp-workload-identity-federation-webhook /usr/bin
